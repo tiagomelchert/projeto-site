@@ -30,11 +30,39 @@
     header img {
       height: 60px;
     }
+ .menu-toggle {
+      display: none;
+      font-size: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
     nav a {
       margin-left: 1.5rem;
       text-decoration: none;
       color: #1f2a54;
       font-weight: 600;
+
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
     .hero {
       padding: 4rem 2rem;
@@ -129,6 +157,32 @@
       font-weight: bold;
       cursor: pointer;
     }
+        .formulario-contato {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    .formulario-contato a {
+      display: inline-flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .formulario-contato a img {
+      width: 24px;
+      margin-right: 0.5rem;
+    }
     footer {
       background: #eee;
       text-align: center;
@@ -140,7 +194,8 @@
 <body>
   <header>
     <img src="imagens/lOGO Melchert mensagem - 40x15.bmp" alt="Logo Melchert Engenharia e Automação">
-    <nav>
+    <button class="menu-toggle">☰</button>
+    <nav class="menu">
       <a href="index.html">Início</a>
       <a href="servicos.html">Serviços</a>
       <a href="contato.html">Contato</a>
@@ -148,14 +203,13 @@
   </header>
 
   <section class="hero" id="home">
-    <h1>Inovação e Eficiência em Engenharia e Automação</h1>
-    <p>Projetos personalizados, integração de sistemas e monitoramento remoto para elevar o desempenho da sua operação industrial.</p>
+    <h1>Entre em Contato</h1>
+    
   </section>
 
 
   <section class="section" id="contato">
-    <h2>Entre em Contato</h2>
-    <div class="formulario-contato">
+     <div class="formulario-contato">
       <form action="https://formspree.io/f/mgvzapzn" method="POST">
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" required>
@@ -170,9 +224,25 @@
       </form>
     </div>
   </section>
+    <section class="section" id="contato">
+    <h2>Entre em Contato</h2>
+    <div class="formulario-contato">
+      <a href="https://wa.me/5543991936853" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+        (43) 99193-6853
+      </a>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 Melchert Engenharia e Automação. Todos os direitos reservados.
   </footer>
 </body>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
 </html>

@@ -31,11 +31,39 @@
     header img {
       height: 60px;
     }
+.menu-toggle {
+      display: none;
+      font-size: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
     nav a {
       margin-left: 1.5rem;
       text-decoration: none;
       color: #1f2a54;
       font-weight: 600;
+
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
     .hero {
       padding: 4rem 2rem;
@@ -154,7 +182,8 @@
 <body>
   <header>
     <img src="imagens/lOGO Melchert mensagem - 40x15.bmp" alt="Logo Melchert Engenharia e Automação">
-    <nav>
+      <button class="menu-toggle">☰</button>
+    <nav class="menu">
       <a href="index.html">Início</a>
       <a href="servicos.html">Serviços</a>
       <a href="contato.html">Contato</a>
@@ -162,13 +191,11 @@
   </header>
 
   <section class="hero" id="home">
-    <h1>Inovação e Eficiência em Engenharia e Automação</h1>
-    <p>Projetos personalizados, integração de sistemas e monitoramento remoto para elevar o desempenho da sua operação industrial.</p>
+    <h1>Trabalhos Realizados</h1>
+    
   </section>
 
   <section class="section" id="servicos">
-    <h2 style="margin-top: 4rem;">Trabalhos Realizados</h2>
-
     <h3>Painéis para Grupo Geradores</h3>
     <div class="galeria">
       <div class="galeria-item">
@@ -235,4 +262,11 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 </body>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
 </html>

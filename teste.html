@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Melchert Engenharia e Automação</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
+    <style>
     * {
       margin: 0;
       padding: 0;
@@ -35,6 +35,10 @@
       text-decoration: none;
       color: #1f2a54;
       font-weight: 600;
+      
+    }
+    nav a:hover{
+      text-decoration: underline;
     }
     .hero {
       padding: 4rem 2rem;
@@ -118,27 +122,6 @@
       width: 24px;
       margin-right: 0.5rem;
     }
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .galeria-item {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .galeria-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .galeria-item p {
-      padding: 0.75rem 1rem;
-      font-weight: 500;
-    }
     footer {
       background: #eee;
       text-align: center;
@@ -149,7 +132,7 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo Melchert Engenharia e Automação">
+    <img src="imagens/lOGO Melchert mensagem - 40x15.bmp" alt="Logo Melchert Engenharia e Automação">
     <nav>
       <a href="index.html">Início</a>
       <a href="servicos.html">Serviços</a>
@@ -163,46 +146,40 @@
   </section>
 
   <section class="section" id="servicos">
-    <h2 style="margin-top: 4rem;">Trabalhos Realizados</h2>
-    <h3>Painéis para Grupo Geradores</h3>
-    <div class="galeria">
-      <div class="galeria-item">
-        <img src="imagens/servicos/paineis geradores/painel01.jpg" alt="Painel de comando 1">
-        <p>Painel de comando para grupo gerador 200kVA</p>
+    <h2>Nossos Serviços</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Automação Industrial</h3>
+        <p>Desenvolvimento de sistemas com CLPs, IHMs, sensores e atuadores. Desde o planejamento até a implementação.</p>
       </div>
-      <div class="galeria-item">
-        <img src="imagens/servicos/paineis geradores/painel02.jpg" alt="Painel de comando 2">
-        <p>Painel de transferência automática com IHM</p>
+      <div class="card">
+        <h3>Supervisórios e Monitoramento</h3>
+        <p>Criação de sistemas SCADA com gráficos em tempo real, históricos, alarmes e dashboards intuitivos.</p>
       </div>
-    </div>
-
-    <h3 style="margin-top:2rem;">Monitoramento para Grupo Geradores</h3>
-    <div class="galeria">
-      <div class="galeria-item">
-        <img src="imagens/monitoramento1.jpg" alt="Tela SCADA gerador">
-        <p>Supervisório com leitura remota e alarmes</p>
+      <div class="card">
+        <h3>Integração de Sistemas</h3>
+        <p>Integração via Modbus, MQTT, OPC UA e bancos de dados como MySQL e InfluxDB.</p>
       </div>
-      <div class="galeria-item">
-        <img src="imagens/monitoramento2.jpg" alt="Dashboard online">
-        <p>Dashboard online com indicadores de desempenho</p>
+      <div class="card">
+        <h3>Automação Grupo Geradores</h3>
+        <p>Especializados na automação de grupos geradores movidos a biogás com ampla gama de controladores, fornecemos controle completo do sistema, monitoramento em tempo real, proteção dos equipamentos e aumento da eficiência energética, com soluções robustas e seguras adaptadas ao seu projeto.</p>
       </div>
-    </div>
-
-    <h3 style="margin-top:2rem;">Automação Biorrefinaria</h3>
-    <div class="galeria">
-      <div class="galeria-item">
-        <img src="imagens/biorrefinaria1.jpg" alt="Painel de automação">
-        <p>Automação de digestores com CLP e sensores</p>
+      <div class="card">
+        <h3>Instalação de Sensores</h3>
+        <p>Sensores de nível, temperatura, pressão, vazão e muito mais para controle preciso de processos.</p>
       </div>
-      <div class="galeria-item">
-        <img src="imagens/biorrefinaria2.jpg" alt="Controle de processo">
-        <p>Controle de processo com supervisório e alarmes</p>
+      <div class="card">
+        <h3>Projetos Elétricos e Painéis</h3>
+        <p>Montagem e retrofit de painéis de comando e força, conforme normas técnicas.</p>
       </div>
     </div>
-
   </section>
 
- <section class="section" id="contato">
+  <!-- <section class="cta" id="contato">
+    <h2>Solicite um orçamento agora mesmo!</h2>
+    <a href="mailto:tiago@melchertautomacao.com.br">Fale Conosco</a>
+  </section> -->
+  <section class="section" id="contato">
     <h2>Entre em Contato</h2>
     <div class="formulario-contato">
       <a href="https://wa.me/5543991936853" target="_blank">
