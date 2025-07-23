@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melchert Engenharia e Automação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #f8f9fa;
+      color: #1f2a54;
+    }
+    header {
+      background-color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #1f2a54;
+      font-weight: 600;
+    }
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, #00cc00 0%, #1f2a54 100%);
+      color: white;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      font-size: 2rem;
+      color: #00cc00;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.06);
+    }
+    .card h3 {
+      color: #1f2a54;
+      margin-bottom: 0.5rem;
+    }
+    .cta {
+      background-color: #1f2a54;
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .cta h2 {
+      margin-bottom: 1rem;
+    }
+    .cta a {
+      background-color: #00cc00;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .formulario-contato {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.06);
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+    .formulario-contato a {
+      display: inline-flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .formulario-contato a img {
+      width: 24px;
+      margin-right: 0.5rem;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .galeria-item {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .galeria-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .galeria-item p {
+      padding: 0.75rem 1rem;
+      font-weight: 500;
+    }
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo Melchert Engenharia e Automação">
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Inovação e Eficiência em Engenharia e Automação</h1>
+    <p>Projetos personalizados, integração de sistemas e monitoramento remoto para elevar o desempenho da sua operação industrial.</p>
+  </section>
+
+  <section class="section" id="servicos">
+    <h2 style="margin-top: 4rem;">Trabalhos Realizados</h2>
+    <h3>Painéis para Grupo Geradores</h3>
+    <div class="galeria">
+      <div class="galeria-item">
+        <img src="imagens/servicos/paineis geradores/painel01.jpg" alt="Painel de comando 1">
+        <p>Painel de comando para grupo gerador 200kVA</p>
+      </div>
+      <div class="galeria-item">
+        <img src="imagens/servicos/paineis geradores/painel02.jpg" alt="Painel de comando 2">
+        <p>Painel de transferência automática com IHM</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:2rem;">Monitoramento para Grupo Geradores</h3>
+    <div class="galeria">
+      <div class="galeria-item">
+        <img src="imagens/monitoramento1.jpg" alt="Tela SCADA gerador">
+        <p>Supervisório com leitura remota e alarmes</p>
+      </div>
+      <div class="galeria-item">
+        <img src="imagens/monitoramento2.jpg" alt="Dashboard online">
+        <p>Dashboard online com indicadores de desempenho</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:2rem;">Automação Biorrefinaria</h3>
+    <div class="galeria">
+      <div class="galeria-item">
+        <img src="imagens/biorrefinaria1.jpg" alt="Painel de automação">
+        <p>Automação de digestores com CLP e sensores</p>
+      </div>
+      <div class="galeria-item">
+        <img src="imagens/biorrefinaria2.jpg" alt="Controle de processo">
+        <p>Controle de processo com supervisório e alarmes</p>
+      </div>
+    </div>
+
+  </section>
+
+ <section class="section" id="contato">
+    <h2>Entre em Contato</h2>
+    <div class="formulario-contato">
+      <a href="https://wa.me/5543991936853" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+        (43) 99193-6853
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Melchert Engenharia e Automação. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
